@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vela Night</title>
+    <title>Social Links</title>
     <style>
         * {
             margin: 0;
@@ -35,12 +35,11 @@
             object-fit: cover;
         }
         .container {
-            position: relative;
             display: flex;
             flex-direction: column;
             gap: 15px;
             z-index: 1;
-            align-items: center; /* Центрируем кнопки */
+            align-items: center;
             position: relative;
         }
         .neon-text {
@@ -49,7 +48,7 @@
             color: #fff;
             text-transform: uppercase;
             letter-spacing: 5px;
-            position: absolute;
+            position: fixed;
             top: 20px; /* Убираем текст от верхнего края */
             left: 50%;
             transform: translateX(-50%); /* Центрируем текст по горизонтали */
@@ -125,6 +124,19 @@
             }
             100% {
                 transform: scale(1);
+            }
+        }
+
+        /* Адаптивные стили для мобильных */
+        @media (max-width: 768px) {
+            .neon-text {
+                font-size: 40px;
+                top: 10px; /* Текст будет ближе к верхнему краю */
+            }
+            .btn {
+                width: 200px;
+                font-size: 16px;
+                padding: 12px;
             }
         }
     </style>
