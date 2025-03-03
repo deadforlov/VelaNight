@@ -37,7 +37,7 @@
         .container {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 20px; /* Увеличиваем отступы между кнопками */
             z-index: 1;
             align-items: center;
             position: relative;
@@ -62,40 +62,42 @@
             position: absolute;
             top: 0;
             left: 0;
-            color: #00ff99; /* Ярко-зеленый цвет */
             -webkit-background-clip: text;
             background-clip: text;
             animation: neon-glow 1.5s infinite alternate;
         }
+        /* Glow эффекты для разных кнопок */
         @keyframes glow {
             0% {
-                text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #00ff99, 0 0 20px #00ff99, 0 0 25px #00ff99, 0 0 30px #00ff99;
+                text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #f7d10b, 0 0 20px #f7d10b, 0 0 25px #f7d10b, 0 0 30px #f7d10b; /* Золотой для Premium */
             }
             100% {
-                text-shadow: 0 0 10px #00ff99, 0 0 20px #00ff99, 0 0 30px #00ff99, 0 0 40px #00ff99, 0 0 50px #00ff99, 0 0 60px #00ff99;
+                text-shadow: 0 0 10px #f7d10b, 0 0 20px #f7d10b, 0 0 30px #f7d10b, 0 0 40px #f7d10b, 0 0 50px #f7d10b, 0 0 60px #f7d10b;
             }
         }
+
         @keyframes neon-glow {
             0% {
-                color: #00ff99;
-                text-shadow: 0 0 5px #00ff99, 0 0 10px #00ff99, 0 0 15px #00ff99;
+                color: #0088cc; /* Голубой для Telegram */
+                text-shadow: 0 0 5px #0088cc, 0 0 10px #0088cc, 0 0 15px #0088cc;
             }
             100% {
-                color: #ff00ff; /* Ярко-розовый цвет для неона */
-                text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff;
+                color: #bc1888; /* Розовый для Instagram */
+                text-shadow: 0 0 10px #bc1888, 0 0 20px #bc1888, 0 0 30px #bc1888;
             }
         }
+
         .btn {
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 250px;
-            padding: 15px;
+            width: 280px; /* Увеличиваем ширину */
+            padding: 18px; /* Увеличиваем отступы */
             text-decoration: none;
-            font-size: 18px;
+            font-size: 20px; /* Увеличиваем размер шрифта */
             font-weight: bold;
             color: white;
-            border-radius: 50px;
+            border-radius: 60px; /* Увеличиваем радиус скругления */
             transition: transform 0.3s, box-shadow 0.3s;
             animation: pulse 1.5s infinite;
         }
@@ -135,9 +137,9 @@
                 top: 10px; /* Текст будет ближе к верхнему краю */
             }
             .btn {
-                width: 200px;
-                font-size: 16px;
-                padding: 12px;
+                width: 240px; /* Уменьшаем ширину для мобильных */
+                font-size: 18px; /* Меньше шрифт для мобильных */
+                padding: 16px; /* Меньше отступы для мобильных */
             }
         }
     </style>
