@@ -39,25 +39,27 @@
             flex-direction: column;
             gap: 15px;
             z-index: 1;
-            text-align: center;
-            margin-top: 100px; /* Добавляем отступ сверху для текста */
+            align-items: center; /* Центрируем кнопки */
+            margin-top: 50px; /* Отступ от текста */
         }
         .neon-text {
-            font-size: 50px;
+            font-size: 60px;
             font-weight: bold;
             color: #fff;
             text-transform: uppercase;
             letter-spacing: 5px;
-            margin-bottom: 30px;
-            position: relative;
+            position: absolute;
+            top: 20px; /* Помещаем текст в самый верх */
             animation: glow 1.5s ease-in-out infinite;
+            text-align: center;
+            z-index: 2;
         }
         .neon-text::before {
             content: "Vela Night";
             position: absolute;
             top: 0;
             left: 0;
-            color: #00ff99;
+            color: #00ff99; /* Ярко-зеленый цвет */
             -webkit-background-clip: text;
             background-clip: text;
             animation: neon-glow 1.5s infinite alternate;
@@ -76,7 +78,7 @@
                 text-shadow: 0 0 5px #00ff99, 0 0 10px #00ff99, 0 0 15px #00ff99;
             }
             100% {
-                color: #ff00ff;
+                color: #ff00ff; /* Ярко-розовый цвет для неона */
                 text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff;
             }
         }
