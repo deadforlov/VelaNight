@@ -41,9 +41,13 @@
             z-index: 1;
             align-items: center;
             position: relative;
+            padding: 20px;
+            width: 375px; /* Фиксированная ширина, как у телефона */
+            height: 667px; /* Высота аналогичная мобильному экрану */
+            overflow: hidden;
         }
         .neon-text {
-            font-size: 60px;
+            font-size: 40px;
             font-weight: bold;
             color: #fff;
             text-transform: uppercase;
@@ -91,13 +95,13 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 280px; /* Увеличиваем ширину */
+            width: 100%; /* Кнопки занимают всю ширину контейнера */
             padding: 18px; /* Увеличиваем отступы */
             text-decoration: none;
-            font-size: 20px; /* Увеличиваем размер шрифта */
+            font-size: 16px; /* Уменьшаем размер шрифта */
             font-weight: bold;
             color: white;
-            border-radius: 60px; /* Увеличиваем радиус скругления */
+            border-radius: 30px; /* Уменьшаем радиус скругления */
             transition: transform 0.3s, box-shadow 0.3s;
             animation: pulse 1.5s infinite;
         }
@@ -127,19 +131,6 @@
             }
             100% {
                 transform: scale(1);
-            }
-        }
-
-        /* Адаптивные стили для мобильных */
-        @media (max-width: 768px) {
-            .neon-text {
-                font-size: 40px;
-                top: 10px; /* Текст будет ближе к верхнему краю */
-            }
-            .btn {
-                width: 240px; /* Уменьшаем ширину для мобильных */
-                font-size: 18px; /* Меньше шрифт для мобильных */
-                padding: 16px; /* Меньше отступы для мобильных */
             }
         }
     </style>
