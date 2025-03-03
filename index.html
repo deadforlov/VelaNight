@@ -34,13 +34,12 @@
             object-fit: cover;
         }
         .container {
-            position: relative;
             display: flex;
             flex-direction: column;
             gap: 15px;
             z-index: 1;
             align-items: center; /* Центрируем кнопки */
-            margin-top: 50px; /* Отступ от текста */
+            position: relative;
         }
         .neon-text {
             font-size: 60px;
@@ -49,7 +48,9 @@
             text-transform: uppercase;
             letter-spacing: 5px;
             position: absolute;
-            top: 20px; /* Помещаем текст в самый верх */
+            top: 20px; /* Убираем текст от верхнего края */
+            left: 50%;
+            transform: translateX(-50%); /* Центрируем текст по горизонтали */
             animation: glow 1.5s ease-in-out infinite;
             text-align: center;
             z-index: 2;
