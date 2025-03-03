@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Social Links</title>
+    <title>Vela Night</title>
     <style>
         * {
             margin: 0;
@@ -37,25 +37,27 @@
         .container {
             display: flex;
             flex-direction: column;
-            gap: 20px; /* Увеличиваем отступы между кнопками */
+            gap: 15px; /* Отступы между кнопками */
             z-index: 1;
             align-items: center;
             position: relative;
+            width: 90vw;
+            height: 90vh;
         }
         .neon-text {
-            font-size: 60px;
+            font-size: 8vw; /* Размер шрифта зависит от ширины экрана */
             font-weight: bold;
             color: #fff;
             text-transform: uppercase;
             letter-spacing: 5px;
             position: fixed;
-            top: 20px; /* Убираем текст от верхнего края */
+            top: 5vh; /* Расстояние от верхней части экрана */
             left: 50%;
-            transform: translateX(-50%); /* Центрируем текст по горизонтали */
-            animation: glow 2s ease-in-out infinite;
+            transform: translateX(-50%); /* Центрируем текст */
+            animation: glow 4s ease-in-out infinite; /* Медленная анимация */
             text-align: center;
             z-index: 2;
-            white-space: nowrap; /* Запрещаем перенос текста на новую строку */
+            white-space: nowrap;
         }
         .neon-text::before {
             content: "Vela Night";
@@ -64,40 +66,37 @@
             left: 0;
             -webkit-background-clip: text;
             background-clip: text;
-            animation: neon-glow 2s ease-in-out infinite;
+            animation: neon-glow 4s ease-in-out infinite; /* Медленная анимация */
         }
-        /* Glow эффекты для разных кнопок */
         @keyframes glow {
             0%, 100% {
-                text-shadow: 0 0 3px #fff, 0 0 5px #f7d10b; /* Легкое свечение */
+                text-shadow: 0 0 3px #fff, 0 0 5px #f7d10b;
             }
             50% {
-                text-shadow: 0 0 5px #f7d10b, 0 0 7px #f7d10b; /* Легкое свечение с увеличением */
+                text-shadow: 0 0 5px #f7d10b, 0 0 7px #f7d10b;
             }
         }
-
         @keyframes neon-glow {
             0%, 100% {
-                color: #0088cc; /* Голубой для Telegram */
-                text-shadow: 0 0 3px #0088cc, 0 0 5px #0088cc; /* Умеренное свечение */
+                color: #0088cc;
+                text-shadow: 0 0 3px #0088cc, 0 0 5px #0088cc;
             }
             50% {
-                color: #bc1888; /* Розовый для Instagram */
-                text-shadow: 0 0 5px #bc1888, 0 0 7px #bc1888; /* Легкое розовое свечение */
+                color: #bc1888;
+                text-shadow: 0 0 5px #bc1888, 0 0 7px #bc1888;
             }
         }
-
         .btn {
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 280px; /* Увеличиваем ширину */
-            padding: 18px; /* Увеличиваем отступы */
+            width: 80%; /* Ширина кнопок зависит от ширины экрана */
+            padding: 6vh; /* Отступы для кнопок */
             text-decoration: none;
-            font-size: 20px; /* Увеличиваем размер шрифта */
+            font-size: 5vw; /* Размер шрифта зависит от ширины экрана */
             font-weight: bold;
             color: white;
-            border-radius: 60px; /* Увеличиваем радиус скругления */
+            border-radius: 60px;
             transition: transform 0.3s, box-shadow 0.3s;
             animation: pulse 1.5s infinite;
         }
@@ -127,19 +126,6 @@
             }
             100% {
                 transform: scale(1);
-            }
-        }
-
-        /* Адаптивные стили для мобильных */
-        @media (max-width: 768px) {
-            .neon-text {
-                font-size: 40px;
-                top: 10px; /* Текст будет ближе к верхнему краю */
-            }
-            .btn {
-                width: 240px; /* Уменьшаем ширину для мобильных */
-                font-size: 18px; /* Меньше шрифт для мобильных */
-                padding: 16px; /* Меньше отступы для мобильных */
             }
         }
     </style>
