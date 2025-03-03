@@ -39,6 +39,46 @@
             flex-direction: column;
             gap: 15px;
             z-index: 1;
+            text-align: center;
+            margin-top: 100px; /* Добавляем отступ сверху для текста */
+        }
+        .neon-text {
+            font-size: 50px;
+            font-weight: bold;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            margin-bottom: 30px;
+            position: relative;
+            animation: glow 1.5s ease-in-out infinite;
+        }
+        .neon-text::before {
+            content: "Vela Night";
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: #00ff99;
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: neon-glow 1.5s infinite alternate;
+        }
+        @keyframes glow {
+            0% {
+                text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #00ff99, 0 0 20px #00ff99, 0 0 25px #00ff99, 0 0 30px #00ff99;
+            }
+            100% {
+                text-shadow: 0 0 10px #00ff99, 0 0 20px #00ff99, 0 0 30px #00ff99, 0 0 40px #00ff99, 0 0 50px #00ff99, 0 0 60px #00ff99;
+            }
+        }
+        @keyframes neon-glow {
+            0% {
+                color: #00ff99;
+                text-shadow: 0 0 5px #00ff99, 0 0 10px #00ff99, 0 0 15px #00ff99;
+            }
+            100% {
+                color: #ff00ff;
+                text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff;
+            }
         }
         .btn {
             display: flex;
@@ -90,6 +130,7 @@
         <img src="https://s3.gifyu.com/images/bbN8c.gif" alt="GIF Animation">
     </div>
     <div class="container">
+        <div class="neon-text">Vela Night</div>
         <a href="https://t.me/+4Jgiiyrn-QxlZDRi" class="btn premium"><i class="fa-solid fa-star"></i>Premium Channel</a>
         <a href="#" class="btn telegram"><i class="fa-brands fa-telegram"></i>Telegram</a>
         <a href="#" class="btn instagram"><i class="fa-brands fa-instagram"></i>Instagram</a>
