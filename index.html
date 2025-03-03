@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Social Links</title>
+    <title>Vela Night</title>
     <style>
         * {
             margin: 0;
@@ -64,26 +64,26 @@
             left: 0;
             -webkit-background-clip: text;
             background-clip: text;
-            animation: neon-glow 3s ease-in-out infinite;
+            animation: neon-glow 2s ease-in-out infinite;
         }
         /* Glow эффекты для разных кнопок */
         @keyframes glow {
             0%, 100% {
-                text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #f7d10b, 0 0 20px #f7d10b, 0 0 25px #f7d10b, 0 0 30px #f7d10b; /* Золотой для Premium */
+                text-shadow: 0 0 3px #fff, 0 0 5px #f7d10b, 0 0 7px #f7d10b; /* Сниженное свечение */
             }
             50% {
-                text-shadow: 0 0 15px #f7d10b, 0 0 25px #f7d10b, 0 0 35px #f7d10b, 0 0 45px #f7d10b;
+                text-shadow: 0 0 7px #f7d10b, 0 0 10px #f7d10b; /* Сильное свечение в середине */
             }
         }
 
         @keyframes neon-glow {
             0%, 100% {
                 color: #0088cc; /* Голубой для Telegram */
-                text-shadow: 0 0 10px #0088cc, 0 0 15px #0088cc, 0 0 20px #0088cc;
+                text-shadow: 0 0 5px #0088cc, 0 0 7px #0088cc; /* Умеренное свечение */
             }
             50% {
                 color: #bc1888; /* Розовый для Instagram */
-                text-shadow: 0 0 20px #bc1888, 0 0 30px #bc1888, 0 0 40px #bc1888;
+                text-shadow: 0 0 10px #bc1888, 0 0 15px #bc1888; /* Яркое свечение */
             }
         }
 
